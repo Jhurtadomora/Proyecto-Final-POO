@@ -1,71 +1,73 @@
-# Experiencia Ecomision
-Hecho por: Jerónimo Hurtado Mora / Juan Manuel Paredes Betancourt
+# Experiencia EcoMisión
 
-## Descripcion del proyecto
-EcoMisión es un juego de exploración ambiental hecho en C++ con lo aprendido durante nuestro curso de POO. En este juego controlas a un explorador en una reserva natural con diferentes zonas o entornos. El explorador cuenta con una energía que se puede agotar y un sistema de puntuación que aumenta a medida que cumples el objetivo del juego: restaurar el entorno de las zonas rescatando animales, limpiando basura, recogiendo plantas para recuperar energía y usando portales para moverte entre zonas. 
+**Hecho por:** Jerónimo Hurtado Mora / Juan Manuel Paredes Betancourt
 
-A nivel técnico, el proyecto aplica herencia y polimorfismo con la clase abstracta ElementoInteractivo, y el controlador EcoMision maneja todo el flujo del juego. El proyecto se desarrolló en el entorno de CodeBlocks. 
-___
-# Evidencia del proyecto
+## Descripción del proyecto
 
-## Como compilar el proyecto
-Antes de  comenzar a jugar y a probar el codigo,debemos saber como compilarlo y para ello hay que seguir las siguientes instrucciones:
+EcoMisión es un juego de exploración ambiental desarrollado en C++ con los conceptos aprendidos en nuestro curso de Programación Orientada a Objetos. En este juego controlas a un explorador que recorre una reserva natural compuesta por diferentes zonas. El explorador posee una energía limitada y un sistema de puntuación que aumenta conforme avanzas en tu objetivo: restaurar el entorno de las zonas rescatando animales, limpiando residuos, recolectando plantas para recuperar energía y utilizando portales para desplazarte entre zonas.
 
-1. Irse al apartado del repositorio llamado src y descargar todos los archivos que hay adentro, incluyendo los archivos de las subcarpetas llamadas CodeBlocks y model en las cuales se encuentran los archivos que se generan al crear un proyecto en CodeBlocks y los .cpp .h respectivamente.
+Técnicamente, el proyecto aplica herencia y polimorfismo mediante la clase abstracta `ElementoInteractivo`, mientras que la clase controladora `EcoMision` gestiona todo el flujo del juego. El proyecto fue desarrollado en Code::Blocks.
 
-<img width="1280" height="191" alt="image" src="https://github.com/user-attachments/assets/f402472a-277b-4059-93b1-f845127657d9" />
+---
 
-2. Al haber descargado todos los archivos de la carpeta dirijite hacia tu CodeBlocks (asegurate previamente que tu CodeBlocks compile bien).
+## Cómo compilar el proyecto
 
-3. Al abrir el CodeBlocks seleccionar la opcion de " Open an existing Project " y seleccionas el archivo.cpb que se encuentra dentro de la subcarpeta de la carpeta que descargaste anteriormente.
+Antes de comenzar a jugar y probar el código, sigue estas instrucciones:
 
-   <img width="212" height="87" alt="image" src="https://github.com/user-attachments/assets/b2ec794d-e3c1-42d3-a8c7-67be0853a4e2" />
+1. **Descargar los archivos**: Ve al repositorio en la carpeta `src` y descarga todos los archivos, incluidos los de las subcarpetas `CodeBlocks` y `model`, que contienen los archivos de configuración de Code::Blocks y los archivos `.cpp` y `.h`.
 
+   ![Estructura de carpetas](https://github.com/user-attachments/assets/f402472a-277b-4059-93b1-f845127657d9)
 
-5. Al selecionarlo, te abrira el proyecto y para ejecutarlo busca el main, el cual se encuentra en sources ya que este es un .cpp .
+2. **Abrir Code::Blocks**: Asegúrate de que tu instalación de Code::Blocks esté funcionando correctamente.
 
-<img width="235" height="63" alt="image" src="https://github.com/user-attachments/assets/990b35b4-9c5c-42dd-a2d8-b1714fd2cdf7" />
+3. **Cargar el proyecto**: Selecciona "Open an existing Project" y busca el archivo `.cbp` que está en la subcarpeta que descargaste.
 
-6. Una vez dentro del main presiona el boton llamado " Build and Run " para poder que el programa compile y comiences tu experiencia en el Juego. 
+   ![Opción de abrir proyecto](https://github.com/user-attachments/assets/b2ec794d-e3c1-42d3-a8c7-67be0853a4e2)
 
-<img width="365" height="273" alt="image" src="https://github.com/user-attachments/assets/eb797cc5-0709-4ccc-b0e0-479ec130ece2" />
+4. **Localizar el main**: Una vez abierto el proyecto, encontrarás el archivo `main.cpp` en la carpeta "sources".
 
-  
+   ![Ubicación del main](https://github.com/user-attachments/assets/990b35b4-9c5c-42dd-a2d8-b1714fd2cdf7)
+
+5. **Compilar y ejecutar**: Presiona el botón "Build and Run" para compilar el programa e iniciar tu experiencia en el juego.
+
+   ![Botón Build and Run](https://github.com/user-attachments/assets/eb797cc5-0709-4ccc-b0e0-479ec130ece2)
+
+---
 
 ## Archivos principales
 
-En realidad todos los archivos en este proyecto son bastante importantes pero una posible clasificacion de estos seria:
-
 | Importancia | Archivo | Descripción | Por qué es clave |
 |---|---|---|---|
-| Alta | `EcoMision.h/cpp` | Controlador principal del juego. Se encarga de inicializar la reserva, crear al explorador y correr el menú interactivo. | Es el cerebro del programa; sin esta clase no arranca el juego ni se coordina el flujo. |
-| Alta | `ElementoInteractivo.h/cpp` | Clase base abstracta que define el método virtual puro `interactuar()` para todo lo que hay en el mapa. | Es la base del polimorfismo, permitiendo manejar animales, plantas o residuos con la misma interfaz sin repetir código. |
-| Media-Alta | `Zona.h/cpp` | Representa un escenario de la reserva. Guarda la lista de elementos y tiene el método `interactuar()` sobrecargado por índice o nombre. | Funciona como el contenedor del mapa y organiza qué objetos hay en cada lugar para que el explorador interactúe con ellos. |
-| Media | `Explorador.h/cpp` | Modela al personaje del usuario, controlando su energía, los puntos ambientales y la zona donde está parado. | Es el protagonista; toda la jugabilidad se basa en cómo cambian sus estadísticas según las decisiones que tome. |
-| Media | Clases derivadas (`AnimalHerido`, `PlantaMedicinal`, `ResiduoContaminante`, etc.) | Las implementaciones reales de `ElementoInteractivo` que definen el comportamiento de cada objeto. | Es donde se ve el polimorfismo en acción, dándole la lógica propia a cada mecánica (limpiar, curar, recargar). |
+| **Alta** | `EcoMision.h/cpp` | Controlador principal del juego. Se encarga de inicializar la reserva, crear al explorador y gestionar el menú interactivo. | Es el cerebro del programa; sin esta clase no arranca el juego ni se coordina el flujo general. |
+| **Alta** | `ElementoInteractivo.h/cpp` | Clase base abstracta que define el método virtual puro `interactuar()` para todos los elementos del mapa. | Implementa el polimorfismo, permitiendo manejar animales, plantas y residuos con la misma interfaz sin duplicar código. |
+| **Media-Alta** | `Zona.h/cpp` | Representa un escenario de la reserva. Almacena la lista de elementos y ofrece el método `interactuar()` sobrecargado por índice o nombre. | Funciona como el contenedor del entorno y organiza qué objetos hay en cada lugar para que el explorador pueda interactuar con ellos. |
+| **Media** | `Explorador.h/cpp` | Modela al personaje del jugador, controlando su energía, puntos ambientales y zona actual. | Es el protagonista; toda la jugabilidad se basa en cómo cambian sus estadísticas según tus decisiones. |
+| **Media** | Clases derivadas (`AnimalHerido`, `PlantaMedicinal`, `ResiduoContaminante`, etc.) | Implementaciones concretas de `ElementoInteractivo` que definen el comportamiento de cada objeto. | Aquí se ve el polimorfismo en acción, otorgándole lógica propia a cada mecánica (limpiar, curar, recargar). |
+
+---
 
 ## Ejecución
-En las siguiente fotos se obervara el funcionamiento del proyecto
 
-<img width="402" height="323" alt="image" src="https://github.com/user-attachments/assets/0eea4944-5806-4e43-a648-dbb987ab4985" />
+A continuación se muestra el funcionamiento del proyecto:
 
-Menu de inicio con estado inical del explorador
+**Menú de inicio con estado inicial del explorador**
 
-<img width="435" height="566" alt="image" src="https://github.com/user-attachments/assets/be484d86-5b70-4e19-8f63-5ea1ad0fac60" />
+![Menú inicio](https://github.com/user-attachments/assets/0eea4944-5806-4e43-a648-dbb987ab4985)
 
-Objetos en la zona de aparicion.
+**Objetos disponibles en la zona de aparición**
 
-<img width="291" height="158" alt="image" src="https://github.com/user-attachments/assets/fbb2590e-2b0e-4a95-ad69-280ab255b2c4" />
+![Objetos zona](https://github.com/user-attachments/assets/be484d86-5b70-4e19-8f63-5ea1ad0fac60)
 
-Interaccion con objeto. ( En este caso animalHerido )
+**Interacción con un objeto (AnimalHerido)**
 
-<img width="348" height="193" alt="image" src="https://github.com/user-attachments/assets/c9efad28-dd75-4c58-8de5-c4c262dde531" />
+![Interacción animal](https://github.com/user-attachments/assets/fbb2590e-2b0e-4a95-ad69-280ab255b2c4)
 
-Estado del explorador luego de curar al animal.
+**Estado del explorador después de curar al animal**
 
-<img width="671" height="120" alt="image" src="https://github.com/user-attachments/assets/fb068c5c-3c8c-479e-9029-588293d8915f" />
+![Estado actualizado](https://github.com/user-attachments/assets/c9efad28-dd75-4c58-8de5-c4c262dde531)
 
-Menu de Configuracion
+**Menú de configuración**
 
+![Menú config](https://github.com/user-attachments/assets/fb068c5c-3c8c-479e-9029-588293d8915f)
 
-___
+---
