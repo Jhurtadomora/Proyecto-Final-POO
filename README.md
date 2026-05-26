@@ -20,6 +20,8 @@ Antes de comenzar a jugar y probar el código, sigue estas instrucciones:
 
 2. **Abrir Code::Blocks**: Asegúrate de que tu instalación de Code::Blocks esté funcionando correctamente.
 
+<img width="140" height="90" alt="image" src="https://github.com/user-attachments/assets/a496247a-ee30-4360-aa0e-086ee9d61cce" />
+
 3. **Cargar el proyecto**: Selecciona "Open an existing Project" y busca el archivo `.cbp` que está en la subcarpeta que descargaste.
 
    ![Opción de abrir proyecto](https://github.com/user-attachments/assets/b2ec794d-e3c1-42d3-a8c7-67be0853a4e2)
