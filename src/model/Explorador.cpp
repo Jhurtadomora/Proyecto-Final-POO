@@ -62,11 +62,11 @@ void Explorador::cambiarZona(Zona* zona) {
 void Explorador::mostrarEstado() {
     cout << "=== Estado del Explorador === " << endl;
     cout << "Nombre: " << nombre << endl;
-    cout << "Energía: "  << energia << endl;
+    cout << "EnergÃ­a: "  << energia << endl;
     cout << "Puntaje ambiental: "  << puntajeAmbiental << endl;
     if (zonaActual != nullptr){
         cout << "Zona actual: "  << zonaActual -> getNombre() << endl;
     }else{
-        cout << "¡ El Explorador no esta en una zona actualmente !";
+        cout << "Â¡ El Explorador no esta en una zona actualmente !";
     }
 }
