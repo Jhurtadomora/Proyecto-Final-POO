@@ -48,18 +48,23 @@ En realidad todos los archivos en este proyecto son bastante importantes pero un
 En las siguiente fotos se obervara el funcionamiento del proyecto
 
 <img width="402" height="323" alt="image" src="https://github.com/user-attachments/assets/0eea4944-5806-4e43-a648-dbb987ab4985" />
+
 Menu de inicio con estado inical del explorador
 
 <img width="435" height="566" alt="image" src="https://github.com/user-attachments/assets/be484d86-5b70-4e19-8f63-5ea1ad0fac60" />
+
 Objetos en la zona de aparicion.
 
 <img width="291" height="158" alt="image" src="https://github.com/user-attachments/assets/fbb2590e-2b0e-4a95-ad69-280ab255b2c4" />
+
 Interaccion con objeto. ( En este caso animalHerido )
 
 <img width="348" height="193" alt="image" src="https://github.com/user-attachments/assets/c9efad28-dd75-4c58-8de5-c4c262dde531" />
+
 Estado del explorador luego de curar al animal.
 
 <img width="671" height="120" alt="image" src="https://github.com/user-attachments/assets/fb068c5c-3c8c-479e-9029-588293d8915f" />
+
 Menu de Configuracion
 
 
