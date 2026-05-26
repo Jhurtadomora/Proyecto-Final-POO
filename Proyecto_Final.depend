@@ -1,0 +1,183 @@
+# depslib dependency file v1.0
+1779551692 source:c:\users\usuario\onedrive\desktop\algoritmos c++\proyecto_final\animalherido.cpp
+	"AnimalHerido.h"
+	"Explorador.h"
+	<iostream>
+
+1779547083 c:\users\usuario\onedrive\desktop\algoritmos c++\proyecto_final\animalherido.h
+	"ElementoInteractivo.h"
+
+1779491628 c:\users\usuario\onedrive\desktop\algoritmos c++\proyecto_final\elementointeractivo.h
+	<string>
+
+1779550700 c:\users\usuario\onedrive\desktop\algoritmos c++\proyecto_final\explorador.h
+	<string>
+
+1779552129 source:c:\users\usuario\onedrive\desktop\algoritmos c++\proyecto_final\elementointeractivo.cpp
+	"ElementoInteractivo.h"
+	<iostream>
+
+1779492294 source:c:\users\usuario\onedrive\desktop\algoritmos c++\proyecto_final\estacionenergia.cpp
+	"EstacionEnergia.h"
+	"Explorador.h"
+	<iostream>
+
+1779492156 c:\users\usuario\onedrive\desktop\algoritmos c++\proyecto_final\estacionenergia.h
+	"ElementoInteractivo.h"
+
+1779486392 source:c:\users\usuario\onedrive\desktop\algoritmos c++\proyecto_final\explorador.cpp
+	"Explorador.h"
+	"Zona.h"
+	<iostream>
+
+1779550458 c:\users\usuario\onedrive\desktop\algoritmos c++\proyecto_final\zona.h
+	<string>
+	<vector>
+	"ElementoInteractivo.h"
+
+1779551692 source:c:\users\usuario\onedrive\desktop\algoritmos c++\proyecto_final\main.cpp
+	"EcoMision.h"
+
+1779550114 c:\users\usuario\onedrive\desktop\algoritmos c++\proyecto_final\ecomision.h
+	"Reserva.h"
+	"Explorador.h"
+
+1779387936 c:\users\usuario\onedrive\desktop\algoritmos c++\proyecto_final\reserva.h
+	<string>
+	<unordered_map>
+	"Zona.h"
+
+1779551692 source:c:\users\usuario\onedrive\desktop\algoritmos c++\proyecto_final\plantamedicinal.cpp
+	"PlantaMedicinal.h"
+	"Explorador.h"
+	<iostream>
+
+1779492557 c:\users\usuario\onedrive\desktop\algoritmos c++\proyecto_final\plantamedicinal.h
+	"ElementoInteractivo.h"
+
+1779547833 source:c:\users\usuario\onedrive\desktop\algoritmos c++\proyecto_final\portalderuta.cpp
+	"PortalDeRuta.h"
+	"Explorador.h"
+	<iostream>
+
+1779547823 c:\users\usuario\onedrive\desktop\algoritmos c++\proyecto_final\portalderuta.h
+	"ElementoInteractivo.h"
+	"Zona.h"
+
+1779551896 source:c:\users\usuario\onedrive\desktop\algoritmos c++\proyecto_final\reserva.cpp
+	"Reserva.h"
+	<iostream>
+
+1779547332 source:c:\users\usuario\onedrive\desktop\algoritmos c++\proyecto_final\residuocontaminante.cpp
+	"ResiduoContaminante.h"
+	"Explorador.h"
+	<iostream>
+
+1779492372 c:\users\usuario\onedrive\desktop\algoritmos c++\proyecto_final\residuocontaminante.h
+	"ElementoInteractivo.h"
+
+1779552142 source:c:\users\usuario\onedrive\desktop\algoritmos c++\proyecto_final\zona.cpp
+	"Zona.h"
+	"Explorador.h"
+	<iostream>
+
+1779551428 source:c:\users\usuario\onedrive\desktop\algoritmos c++\proyecto_final\ecomision.cpp
+	"EcoMision.h"
+	"AnimalHerido.h"
+	"PlantaMedicinal.h"
+	"ResiduoContaminante.h"
+	"EstacionEnergia.h"
+	"PortalDeRuta.h"
+	<iostream>
+
+1779759910 source:c:\jeronimo\proyecto\animalherido.cpp
+	"AnimalHerido.h"
+	"Explorador.h"
+	<iostream>
+
+1779759940 c:\jeronimo\proyecto\animalherido.h
+	"ElementoInteractivo.h"
+
+1779760141 c:\jeronimo\proyecto\elementointeractivo.h
+	<string>
+
+1779760180 c:\jeronimo\proyecto\explorador.h
+	<string>
+
+1779760468 source:c:\jeronimo\proyecto\ecomision.cpp
+	"EcoMision.h"
+	"AnimalHerido.h"
+	"PlantaMedicinal.h"
+	"ResiduoContaminante.h"
+	"EstacionEnergia.h"
+	"PortalDeRuta.h"
+	<iostream>
+
+1779760120 c:\jeronimo\proyecto\ecomision.h
+	"Reserva.h"
+	"Explorador.h"
+
+1779760220 c:\jeronimo\proyecto\reserva.h
+	<string>
+	<unordered_map>
+	"Zona.h"
+
+1779760259 c:\jeronimo\proyecto\zona.h
+	<string>
+	<vector>
+	"ElementoInteractivo.h"
+
+1779760191 c:\jeronimo\proyecto\plantamedicinal.h
+	"ElementoInteractivo.h"
+
+1779760233 c:\jeronimo\proyecto\residuocontaminante.h
+	"ElementoInteractivo.h"
+
+1779760163 c:\jeronimo\proyecto\estacionenergia.h
+	"ElementoInteractivo.h"
+
+1779760201 c:\jeronimo\proyecto\portalderuta.h
+	"ElementoInteractivo.h"
+	"Zona.h"
+
+1779759969 source:c:\jeronimo\proyecto\elementointeractivo.cpp
+	"ElementoInteractivo.h"
+	<iostream>
+
+1779759981 source:c:\jeronimo\proyecto\estacionenergia.cpp
+	"EstacionEnergia.h"
+	"Explorador.h"
+	<iostream>
+
+1779760002 source:c:\jeronimo\proyecto\explorador.cpp
+	"Explorador.h"
+	"Zona.h"
+	<iostream>
+
+1779568850 source:c:\jeronimo\proyecto\main.cpp
+	"EcoMision.h"
+
+1779760018 source:c:\jeronimo\proyecto\plantamedicinal.cpp
+	"PlantaMedicinal.h"
+	"Explorador.h"
+	<iostream>
+
+1779760027 source:c:\jeronimo\proyecto\portalderuta.cpp
+	"PortalDeRuta.h"
+	"Explorador.h"
+	<iostream>
+
+1779760061 source:c:\jeronimo\proyecto\reserva.cpp
+	"Reserva.h"
+	<iostream>
+
+1779760071 source:c:\jeronimo\proyecto\residuocontaminante.cpp
+	"ResiduoContaminante.h"
+	"Explorador.h"
+	<iostream>
+
+1779760098 source:c:\jeronimo\proyecto\zona.cpp
+	"Zona.h"
+	"Explorador.h"
+	<iostream>
+
