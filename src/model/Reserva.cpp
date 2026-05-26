@@ -49,7 +49,7 @@ void Reserva::mostrarZonas() {
     for (auto& par : zonas){
         cout << "==========================================" << endl;
         cout << "Zona: " << endl;
-        cout << "Código: [ " << par.first << " ] " << endl;
+        cout << "CÃ³digo: [ " << par.first << " ] " << endl;
         cout << "Nombre: " <<  par.second -> getNombre ()<< endl;
 
     }
