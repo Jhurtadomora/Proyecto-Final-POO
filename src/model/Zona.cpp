@@ -32,7 +32,7 @@ void Zona::mostrarElementos() {
     cout << "Zona: " << nombre << endl;
     for (int i = 0 ; i < elementos.size(); i++){
         cout << "==========================================" << endl;
-        cout << " Posición: [ " << i << " ], Elemento: " << endl;
+        cout << " PosiciÃ³n: [ " << i << " ], Elemento: " << endl;
         elementos [i] -> mostrarInfo();
     }
 }
@@ -54,5 +54,5 @@ void Zona::interactuar(string nombre, Explorador* explorador) {
         }
     }
     if (!elementoEncontrado)
-            cout << "¡ERROR!: El elemento " << nombre << " no existe. ";
+            cout << "Â¡ERROR!: El elemento " << nombre << " no existe. ";
 }
