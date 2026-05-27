@@ -2,7 +2,7 @@
 
 ## ¿Para qué usamos la IA generativa?
 
-El uso de la inteligencia artificial generativa en el proyecto EcoMisión se enfocó principalmente en el soporte técnico y la validación de decisiones arquitectónicas, sin sustituir en ningún momento el desarrollo propio del código.
+El uso de la inteligencia artificial generativa en el proyecto EcoMisión se enfocó principalmente en el soporte técnico y la validación de decisiones arquitectónicas, sin sustituir en ningún momento el desarrollo propio del código, para el desarrollo de esta bitacora se hizo basados en el archivo abjunto llamado Casos IA, el cual es donde se encuentra toda la evidencia fotografica de como usamos la IA, en este archivo se puede observar tanto el prompt como la respuesta que nos dio.
 
 ### Aplicaciones técnicas:
 
@@ -63,7 +63,7 @@ Sin embargo, el trabajo en equipo permitió potenciar fortalezas específicas se
 
 **Área de especialización:** Jerarquía de herencia y polimorfismo
 
-- Se hizo fuerte en el diseño de la clase abstracta `ElementoInteractivo` y sus cuatro clases derivadas (`AnimalHerido`, `PlantaMedicinal`, `ResiduoContaminante` y `EstacionEnergia`).
+- Se hizo fuerte en el diseño de la clase abstracta `ElementoInteractivo` y sus cinco clases derivadas (`AnimalHerido`, `PlantaMedicinal`, `ResiduoContaminante`,`EstacionEnergia`,`PortalDeRuta`).
 - Domina temas como la sobreescritura del método virtual puro `interactuar()`, el paso de parámetros en constructores y la gestión del ciclo de vida de los elementos.
 
 
