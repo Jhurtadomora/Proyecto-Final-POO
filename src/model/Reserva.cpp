@@ -25,25 +25,26 @@ string Reserva::getNombre() {
     return nombre;
 }
 
-
+// Agrega una zona al mapa con su código como clave
 void Reserva::agregarZona(string codigo, Zona* zona) {
     zonas[codigo] = zona;
 }
 
-
+// Busca una zona por su código y la retorna
 Zona* Reserva::buscarZona(string codigo) {
-
-    auto resultado = zonas.find(codigo);
-
+    // Buscamos en el mapa el codigo
+    auto resultado = zonas.find(codigo);  //auto contiene toda la declaración del mapa
+    // Verificamos si lo encontramos
     if (resultado != zonas.end()) {
-
+        // Retornamos 'second', que contiene el puntero Zona*
         return resultado->second;
     } else {
         return nullptr;
     }
 }
 
-
+// Muestra en consola todos los códigos y nombres de zonas registradas
+// par.first es el código, par.second->getNombre() es el nombre
 void Reserva::mostrarZonas() {
     cout << "Reserva: " << nombre << "\n";
     for (auto& par : zonas){
