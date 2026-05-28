@@ -23,23 +23,23 @@ EcoMision::~EcoMision() {
     delete explorador;
 }
 
-
+// Método principal: controla todo el flujo del programa
 void EcoMision::iniciar() {
     cout << "--- Bienvenido a EcoMision ---";
     prepararReserva();
     crearExplorador();
     ejecutarDemostracion();
 }
-
+//Crea las zonas, reserva, elementos y demás
 void EcoMision::prepararReserva() {
     reserva = new Reserva("Reserva Natural EcoMision");
 
-
+    // ── Zonas ────────────────────────────────────────────
     Zona* bosque = new Zona("Bosque Humedo");
     Zona* rio    = new Zona("Rio Contaminado");
     Zona* centro = new Zona("Centro de Recuperacion Animal");
 
-
+    // ── Elementos del Bosque ─────────────────────────────
     bosque->agregarElemento(new AnimalHerido("Oso",     "Un oso con una pata herida",  50));
     bosque->agregarElemento(new AnimalHerido("Ciervo",  "Un ciervo atrapado en ramas", 40));
     bosque->agregarElemento(new AnimalHerido("Ardilla", "Una ardilla con una herida",  30));
@@ -47,7 +47,7 @@ void EcoMision::prepararReserva() {
     bosque->agregarElemento(new PlantaMedicinal("Diente de Leon", "Planta con propiedades curativas", 20));
     bosque->agregarElemento(new PlantaMedicinal("Aloe",           "Planta cicatrizante",              25));
     bosque->agregarElemento(new PlantaMedicinal("Romero",         "Planta energizante",               15));
-
+    // ── Elementos del Rio ────────────────────────────────
     bosque->agregarElemento(new ResiduoContaminante("Basura",   "Bolsas plasticas abandonadas", 10, 20));
     bosque->agregarElemento(new ResiduoContaminante("Cigarros", "Colillas en el suelo",          5, 15));
     bosque->agregarElemento(new ResiduoContaminante("Pilas",    "Pilas toxicas enterradas",     15, 30));
@@ -66,7 +66,7 @@ void EcoMision::prepararReserva() {
     rio->agregarElemento(new EstacionEnergia("Estacion Rio", "Turbina de agua generadora", 25));
     rio->agregarElemento(new PortalDeRuta("Portal Rio", "Un portal hacia el centro", centro));
 
-
+    // ── Elementos del Centro ─────────────────────────────
     centro->agregarElemento(new AnimalHerido("Aguila",  "Un aguila con el ala rota",         70));
     centro->agregarElemento(new AnimalHerido("Zorro",   "Un zorro desnutrido",                55));
     centro->agregarElemento(new AnimalHerido("Tortuga", "Una tortuga con plastico atorado",   50));
@@ -77,13 +77,13 @@ void EcoMision::prepararReserva() {
     centro->agregarElemento(new EstacionEnergia("Estacion Centro", "Generador del centro", 40));
     centro->agregarElemento(new PortalDeRuta("Portal Centro", "Un portal de regreso al bosque", bosque));
 
-
+    // ── Registrar zonas en la reserva ───────────────────
     reserva->agregarZona("bosque", bosque);
     reserva->agregarZona("rio",    rio);
     reserva->agregarZona("centro", centro);
 }
 
-
+// Crea al explorador y lo ubica en la zona inicial
 void EcoMision::crearExplorador() {
     explorador = new Explorador("Juan Paredes");
     Zona* inicio = reserva->buscarZona("bosque");
@@ -106,9 +106,10 @@ void EcoMision::menuConfiguracion(){
         cin >> opcion;
 
         switch (opcion) {
+                //1. Crea reserva
              case 1: {
 
-                delete reserva;
+                delete reserva; //Eliminar una reserva antes de crearla porque solo pude haber una
                 reserva = nullptr;
                 string nombreReserva;
                 cout << "Digite el nombre de la reserva: ";
@@ -117,6 +118,7 @@ void EcoMision::menuConfiguracion(){
                 cout << "Reserva creada" << endl;
                 break;
             }
+            //2. Registrar zona con código
             case 2: {
                 if (reserva == nullptr) {
                     cout << "Primero crea una reserva." << endl;
@@ -131,8 +133,9 @@ void EcoMision::menuConfiguracion(){
                 cout << "Zona registrada" << endl;
                 break;
             }
+            //3. Crear explorador
             case 3: {
-                delete explorador;
+                delete explorador; // Lo mismo de reserva
                 explorador = nullptr;
                 string nombreExplorador;
                 cout << "Agregue nombre del explorador: ";
@@ -141,6 +144,7 @@ void EcoMision::menuConfiguracion(){
                 cout << "Explorador creado." << endl;
                 break;
             }
+            //4. Ubicar explorador en zona inicial
             case 4: {
                 if (explorador == nullptr || reserva == nullptr) {
                     cout << "Primero crea la reserva y el explorador." << endl;
@@ -187,19 +191,19 @@ void EcoMision::mostrarMenu (){
 
         switch (opcion) {
             case 1:
-
+                // 1. Muestra estado inicial del explorador
                 explorador->mostrarEstado();
                 break;
             case 2:
-
+                // 2. Muestra las zonas de la reserva
                 reserva->mostrarZonas();
                 break;
             case 3:
-
+                // 3. Muestra los elementos de la zona actual
                 explorador->getZonaActual()->mostrarElementos();
                 break;
             case 4: {
-
+                // 4. Interactúa con algunos elementos por índice
                 int indice;
                 cout << "¿Con que índice deseas interactuar? ";
                 cin >> indice;
@@ -208,7 +212,7 @@ void EcoMision::mostrarMenu (){
             }
 
             case 5: {
-
+                // 5. Interactua por nombre
                 string nombreElemento;
                 cout << "¿Con que elemento deseas interactuar? ";
                 cin >> nombreElemento;
@@ -216,7 +220,7 @@ void EcoMision::mostrarMenu (){
                 break;
             }
             case 6: {
-
+                // 6. Cambia de zona al explorador
                 string codigo;
                 cout << "¿A que zona quieres ir? (bosque, rio, vivero...): ";
                 cin >> codigo;
