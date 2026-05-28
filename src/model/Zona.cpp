@@ -36,15 +36,15 @@ void Zona::mostrarElementos() {
         elementos [i] -> mostrarInfo();
     }
 }
-
-
+// SOBRECARGA:
+// Opción 1: por índice (posición en el vector)
 void Zona::interactuar(int indice, Explorador* explorador) {
     if (indice >= 0 && indice < elementos.size())
         elementos[indice]->interactuar(explorador);
 
 }
 
-
+// Opción 2: por nombre del elemento
 void Zona::interactuar(string nombre, Explorador* explorador) {
     bool elementoEncontrado = false;
     for (int i = 0; i < elementos.size(); i ++ ){
