@@ -23,7 +23,8 @@ public:
     string getNombre();
     string getDescripcion();
 
-
+    // Método virtual: hace a esta clase ABSTRACTA
+    // Cada subclase debe sobreescribir este método
     virtual void interactuar(Explorador* explorador) = 0;
 
 
