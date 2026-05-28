@@ -13,7 +13,7 @@ public:
 
     PortalDeRuta(string nombre, string descripcion, Zona* zonaDestino);
 
-
+    // Sobreescritura del método abstracto
     void interactuar(Explorador* explorador) override;
 };
 
